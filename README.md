@@ -152,4 +152,21 @@ Run the project 🥳
 npm run dev
 ```
 
+### 🧰 Resilient file transfers
+
+A standalone Python helper is included to make copying huge folders to external
+storage more reliable (for example Windows paths such as
+`\\This PC\\Lenovo Yoga Tab 11\\Internal shared storage\\Download\\BiglyBT`).
+
+```bash
+python scripts/robust_transfer.py <source> <destination>
+```
+
+Key features:
+
+* Automatic resume for partially copied files after a disconnect.
+* Optional SHA256 verification to detect silent corruption.
+* Persistent logging via `--log-file` and verbose output when needed.
+* Dry-run support to preview the planned operations before touching data.
+
 ---
